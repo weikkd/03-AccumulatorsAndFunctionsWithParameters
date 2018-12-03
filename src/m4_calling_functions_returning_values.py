@@ -21,7 +21,7 @@ def main():
     run_test_fancy_sums_of_digits()
 
     # -------------------------------------------------------------------------
-    # TODO: 9. DO THIS LAST!
+    # DONE: 9. DO THIS LAST!
     #    -- Uncomment the line of code below to run the main function
     #         in m4t_tester.py (do not make changes to it).
     #         It runs OUR tests on your code.
@@ -32,7 +32,7 @@ def main():
     #       ** Ask a TA or your professor for help in that case. **
     # -------------------------------------------------------------------------
 
-    # m4t_tester.main()
+    m4t_tester.main()
 
 
 def run_test_sum_of_digits():
@@ -157,22 +157,34 @@ def run_test_digits_in_cube():
 
     expected = 9
     answer1 = 3**3
-    answer = sum_of_digits(answer1)
+    answer = digits_in_cube(3)
     print('Inputted expected:', expected)
     print('       actual:  ', answer)
 
     expected = 9
-    answer1 = 6**3
-    answer = sum_of_digits(answer1)
+    answer = digits_in_cube(6)
     print('Inputted expected:', expected)
     print('       actual:  ', answer)
 
     expected = 18
-    answer1 = 9**3
-    answer = sum_of_digits(answer1)
+    answer = digits_in_cube(9)
     print('Inputted expected:', expected)
     print('       actual:  ', answer)
 
+    expected = 9
+    answer = sum_of_digits(3 ** 3)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 9
+    answer = sum_of_digits(6 ** 3)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 18
+    answer = sum_of_digits(9 ** 3)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
 
 def digits_in_cube(n):
     """
@@ -198,7 +210,7 @@ def digits_in_cube(n):
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this function.
+    # DONE: 5. Implement this function.
     #   It TESTS the  digits_in_power  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -209,8 +221,35 @@ def run_test_digits_in_power():
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
 
-    print(digits_in_power(3,3))
+    expected = 18
+    answer = digits_in_power(3, 8)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
 
+    expected = 7
+    answer = digits_in_power(2, 10)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 54
+    answer = digits_in_power(12, 12)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 18
+    answer = sum_of_digits(3 ** 8)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 7
+    answer = sum_of_digits(2 ** 10)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 54
+    answer = sum_of_digits(12 ** 12)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
 
 def digits_in_power(n, k):
     """
@@ -224,7 +263,7 @@ def digits_in_power(n, k):
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,
@@ -236,7 +275,7 @@ def digits_in_power(n, k):
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # DONE: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -248,6 +287,21 @@ def run_test_fancy_sums_of_digits():
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
 
+    expected = 1
+    answer = fancy_sums_of_digits(10)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 237321
+    answer = fancy_sums_of_digits(789)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 79866
+    answer = fancy_sums_of_digits(12)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
     # -------------------------------------------------------------------------
     # HINT:  For your 1st test, consider  n=10.  Figure out BY HAND
     # the correct (expected) answer for that test case.  (It's easy.)
@@ -256,6 +310,26 @@ def run_test_fancy_sums_of_digits():
     # in the doc-string to be sure that you understand the specification.
     # -------------------------------------------------------------------------
 
+    expected = 1
+    answer = sum_of_digits(10 ** 1000)
+    answer1 = sum_of_digits(10 ** 999)
+    rlanswer = sum_of_digits(answer ** answer1)
+    print('Inputted expected:', expected)
+    print('       actual:  ', rlanswer)
+
+    expected = 237321
+    answer = sum_of_digits(789 ** 1000)
+    answer1 = sum_of_digits(789 ** 999)
+    rlanswer = sum_of_digits(answer ** answer1)
+    print('Inputted expected:', expected)
+    print('       actual:  ', rlanswer)
+
+    expected = 79866
+    answer = sum_of_digits(12 ** 1000)
+    answer1 = sum_of_digits(12 ** 999)
+    rlanswer = sum_of_digits(answer ** answer1)
+    print('Inputted expected:', expected)
+    print('       actual:  ', rlanswer)
 
 def fancy_sums_of_digits(n):
     """
@@ -282,7 +356,7 @@ def fancy_sums_of_digits(n):
             -- so this function returns 124309.
     """
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,
