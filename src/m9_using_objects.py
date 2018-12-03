@@ -15,6 +15,8 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     two_circles()
+    lines()
+
 
 def two_circles():
     """
@@ -92,6 +94,21 @@ def circle_and_rectangle():
     #       instance variables for outline thickness, etc.
     # -------------------------------------------------------------------------
 
+    width1 = 600
+    height1 = 600
+    window1 = rg.RoseWindow(width1, height1)
+    center_point = rg.Point(180, 115)
+    radius = 1
+    circle = rg.Circle(center_point, radius)
+    circle.fill_color = 'blue'
+    circle.attach_to(window1)
+
+    point1 = rg.Point(75, 150)
+    point2 = rg.Point(75, 150)
+    rectangle = rg.Rectangle(point1, point2)
+    rectangle.attach_to(window1)
+    window1.render()
+    window1.close_on_mouse_click()
 
 def lines():
     """
