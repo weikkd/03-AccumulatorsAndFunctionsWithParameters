@@ -73,9 +73,9 @@ def draw_circles1():
     window = rg.RoseWindow(400, 400)
     window.close_on_mouse_click()
     for k in range (21):
-        radius = (k*10)
+        (k*10)
     center = rg.Point(200, 200)
-    circle = rg.Circle(center, radius)
+    circle = rg.Circle(center, 123)
     circle.attach_to(window)
 
 def print_sequence2():
