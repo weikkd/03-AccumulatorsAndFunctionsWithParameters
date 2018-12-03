@@ -79,7 +79,7 @@ def run_test_sum_of_digits():
     print('Inputted expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 36
+    expected = 26
     answer = sum_of_digits(18764)
     print('Inputted expected:', expected)
     print('       actual:  ', answer)
@@ -130,7 +130,7 @@ def sum_of_digits(number):
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # DONE: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -155,6 +155,24 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
+    expected = 9
+    answer1 = 3**3
+    answer = sum_of_digits(answer1)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 9
+    answer1 = 6**3
+    answer = sum_of_digits(answer1)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 18
+    answer1 = 9**3
+    answer = sum_of_digits(answer1)
+    print('Inputted expected:', expected)
+    print('       actual:  ', answer)
+
 
 def digits_in_cube(n):
     """
@@ -166,7 +184,7 @@ def digits_in_cube(n):
       this function returns (1 + 2 + 5), which is 8.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -190,6 +208,8 @@ def run_test_digits_in_power():
     print('--------------------------------------------------')
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
+
+    print(digits_in_power(3,3))
 
 
 def digits_in_power(n, k):
